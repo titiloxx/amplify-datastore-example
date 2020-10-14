@@ -1,0 +1,11 @@
+type Reserva @model {
+	children: Int
+	guests: String!
+	checkoutEstimated: AWSDate!
+	checkoutMade: AWSDate
+	checkinEstimated: AWSDate!
+	checkinMade: AWSDate
+	created: AWSDate
+	description: String
+	resource: String
+}
