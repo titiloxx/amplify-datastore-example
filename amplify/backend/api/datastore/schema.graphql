@@ -1,11 +1,26 @@
-type Reserva @model {
+type Reservations @model {
+  id: ID!
 	children: Int
 	guests: String!
-	checkoutEstimated: AWSDate!
-	checkoutMade: AWSDate
-	checkinEstimated: AWSDate!
-	checkinMade: AWSDate
-	created: AWSDate
+  state:String!
+  way:String!
+	checkoutEstimated: AWSTimestamp!
+	checkoutMade: AWSTimestamp
+	checkinEstimated: AWSTimestamp!
+	checkinMade: AWSTimestamp
 	description: String
 	resource: String
+  customersList: [Customers] @connection(keyName: "ReservationsCustomers", fields: ["id"])
+}
+
+type Customers @model 
+               @key(name: "ReservationsCustomers", fields: ["ReservationsId"]){
+  id: ID!
+  ReservationsId:ID!
+  fullName:String!
+  birthdate:AWSTimestamp 
+  phone:String
+  dni:String
+  geo:AWSJSON
+  email:String
 }

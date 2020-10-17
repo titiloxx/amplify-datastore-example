@@ -1,108 +1,138 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBlog = `subscription OnCreateBlog {
-  onCreateBlog {
-    id
-    name
-    posts {
-      nextToken
-    }
-  }
-}
-`;
-export const onUpdateBlog = `subscription OnUpdateBlog {
-  onUpdateBlog {
-    id
-    name
-    posts {
-      nextToken
-    }
-  }
-}
-`;
-export const onDeleteBlog = `subscription OnDeleteBlog {
-  onDeleteBlog {
-    id
-    name
-    posts {
-      nextToken
-    }
-  }
-}
-`;
-export const onCreatePost = `subscription OnCreatePost {
-  onCreatePost {
-    id
-    title
-    blog {
+export const onCreateReservations = /* GraphQL */ `
+  subscription OnCreateReservations {
+    onCreateReservations {
       id
-      name
-    }
-    comments {
-      nextToken
+      children
+      guests
+      state
+      way
+      checkoutEstimated
+      checkoutMade
+      checkinEstimated
+      checkinMade
+      description
+      resource
+      customersList {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const onUpdatePost = `subscription OnUpdatePost {
-  onUpdatePost {
-    id
-    title
-    blog {
+export const onUpdateReservations = /* GraphQL */ `
+  subscription OnUpdateReservations {
+    onUpdateReservations {
       id
-      name
-    }
-    comments {
-      nextToken
+      children
+      guests
+      state
+      way
+      checkoutEstimated
+      checkoutMade
+      checkinEstimated
+      checkinMade
+      description
+      resource
+      customersList {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const onDeletePost = `subscription OnDeletePost {
-  onDeletePost {
-    id
-    title
-    blog {
+export const onDeleteReservations = /* GraphQL */ `
+  subscription OnDeleteReservations {
+    onDeleteReservations {
       id
-      name
-    }
-    comments {
-      nextToken
+      children
+      guests
+      state
+      way
+      checkoutEstimated
+      checkoutMade
+      checkinEstimated
+      checkinMade
+      description
+      resource
+      customersList {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const onCreateComment = `subscription OnCreateComment {
-  onCreateComment {
-    id
-    content
-    post {
+export const onCreateCustomers = /* GraphQL */ `
+  subscription OnCreateCustomers {
+    onCreateCustomers {
       id
-      title
+      ReservationsId
+      fullName
+      birthdate
+      phone
+      dni
+      geo
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const onUpdateComment = `subscription OnUpdateComment {
-  onUpdateComment {
-    id
-    content
-    post {
+export const onUpdateCustomers = /* GraphQL */ `
+  subscription OnUpdateCustomers {
+    onUpdateCustomers {
       id
-      title
+      ReservationsId
+      fullName
+      birthdate
+      phone
+      dni
+      geo
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const onDeleteComment = `subscription OnDeleteComment {
-  onDeleteComment {
-    id
-    content
-    post {
+export const onDeleteCustomers = /* GraphQL */ `
+  subscription OnDeleteCustomers {
+    onDeleteCustomers {
       id
-      title
+      ReservationsId
+      fullName
+      birthdate
+      phone
+      dni
+      geo
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;

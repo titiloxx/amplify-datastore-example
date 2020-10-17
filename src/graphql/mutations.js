@@ -1,108 +1,138 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createBlog = `mutation CreateBlog($input: CreateBlogInput!) {
-  createBlog(input: $input) {
-    id
-    name
-    posts {
-      nextToken
-    }
-  }
-}
-`;
-export const updateBlog = `mutation UpdateBlog($input: UpdateBlogInput!) {
-  updateBlog(input: $input) {
-    id
-    name
-    posts {
-      nextToken
-    }
-  }
-}
-`;
-export const deleteBlog = `mutation DeleteBlog($input: DeleteBlogInput!) {
-  deleteBlog(input: $input) {
-    id
-    name
-    posts {
-      nextToken
-    }
-  }
-}
-`;
-export const createPost = `mutation CreatePost($input: CreatePostInput!) {
-  createPost(input: $input) {
-    id
-    title
-    blog {
+export const createReservations = /* GraphQL */ `
+  mutation CreateReservations($input: CreateReservationsInput!) {
+    createReservations(input: $input) {
       id
-      name
-    }
-    comments {
-      nextToken
+      children
+      guests
+      state
+      way
+      checkoutEstimated
+      checkoutMade
+      checkinEstimated
+      checkinMade
+      description
+      resource
+      customersList {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
-  updatePost(input: $input) {
-    id
-    title
-    blog {
+export const updateReservations = /* GraphQL */ `
+  mutation UpdateReservations($input: UpdateReservationsInput!) {
+    updateReservations(input: $input) {
       id
-      name
-    }
-    comments {
-      nextToken
+      children
+      guests
+      state
+      way
+      checkoutEstimated
+      checkoutMade
+      checkinEstimated
+      checkinMade
+      description
+      resource
+      customersList {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
-  deletePost(input: $input) {
-    id
-    title
-    blog {
+export const deleteReservations = /* GraphQL */ `
+  mutation DeleteReservations($input: DeleteReservationsInput!) {
+    deleteReservations(input: $input) {
       id
-      name
-    }
-    comments {
-      nextToken
+      children
+      guests
+      state
+      way
+      checkoutEstimated
+      checkoutMade
+      checkinEstimated
+      checkinMade
+      description
+      resource
+      customersList {
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const createComment = `mutation CreateComment($input: CreateCommentInput!) {
-  createComment(input: $input) {
-    id
-    content
-    post {
+export const createCustomers = /* GraphQL */ `
+  mutation CreateCustomers($input: CreateCustomersInput!) {
+    createCustomers(input: $input) {
       id
-      title
+      ReservationsId
+      fullName
+      birthdate
+      phone
+      dni
+      geo
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!) {
-  updateComment(input: $input) {
-    id
-    content
-    post {
+export const updateCustomers = /* GraphQL */ `
+  mutation UpdateCustomers($input: UpdateCustomersInput!) {
+    updateCustomers(input: $input) {
       id
-      title
+      ReservationsId
+      fullName
+      birthdate
+      phone
+      dni
+      geo
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
-export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!) {
-  deleteComment(input: $input) {
-    id
-    content
-    post {
+export const deleteCustomers = /* GraphQL */ `
+  mutation DeleteCustomers($input: DeleteCustomersInput!) {
+    deleteCustomers(input: $input) {
       id
-      title
+      ReservationsId
+      fullName
+      birthdate
+      phone
+      dni
+      geo
+      email
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
     }
   }
-}
 `;
