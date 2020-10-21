@@ -1,15 +1,14 @@
 type Reservations @model {
   id: ID!
-	children: Int
-	guests: String!
   state:String!
-  way:String!
 	checkoutEstimated: AWSTimestamp!
 	checkoutMade: AWSTimestamp
 	checkinEstimated: AWSTimestamp!
 	checkinMade: AWSTimestamp
 	description: String
 	resource: String
+  regularCustomer: String
+  roomsList:[ID]
   customersList: [Customers] @connection(keyName: "ReservationsCustomers", fields: ["id"])
 }
 
@@ -21,6 +20,34 @@ type Customers @model
   birthdate:AWSTimestamp 
   phone:String
   dni:String
-  geo:AWSJSON
+  geo:String
   email:String
+}
+
+type Services @model 
+              @key(name: "ServicesCustomers", fields: ["ReservationsId"]){
+  id: ID!
+  ReservationsId:ID!
+  name:String!
+  cost:Int!
+  quantity:Int!
+  description: String
+  components:String
+}
+
+type Payments @model 
+              @key(name: "PaymentsServices", fields: ["ServicesId"]){
+  id: ID!
+  ServicesId:ID!
+  name:String!
+  cost:Int!
+  quantity:Int!
+  description: String
+  components:String
+}
+
+type Rooms @model {
+  id: ID!
+  number:String
+  sector:String
 }

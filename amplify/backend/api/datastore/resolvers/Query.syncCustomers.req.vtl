@@ -1,0 +1,21 @@
+#foreach($group in $context.identity.claims.get("cognito:groups"))
+    #if($group != "admin")
+        #set($inCognitoGroup = $group)
+    #end
+#end
+{
+  "version": "2018-05-29",
+  "operation": "Sync",
+  "limit": $util.defaultIfNull($ctx.args.limit, 100),
+  "nextToken": $util.toJson($util.defaultIfNull($ctx.args.nextToken, null)),
+  "lastSync": $util.toJson($util.defaultIfNull($ctx.args.lastSync, null)),
+  "filter": {
+        "expression" : "begins_with(#title, :title)",
+          "expressionNames" : {
+          "#title" : "usergroup"
+      },
+        "expressionValues" : {
+            ":title" :  $util.dynamodb.toDynamoDBJson($inCognitoGroup)
+        },
+    },       
+}

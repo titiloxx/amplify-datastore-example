@@ -10,29 +10,8 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "children": {
-                    "name": "children",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "guests": {
-                    "name": "guests",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
                 "state": {
                     "name": "state",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "way": {
-                    "name": "way",
                     "isArray": false,
                     "type": "String",
                     "isRequired": true,
@@ -79,6 +58,21 @@ export const schema = {
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
+                },
+                "regularCustomer": {
+                    "name": "regularCustomer",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "roomsList": {
+                    "name": "roomsList",
+                    "isArray": true,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isArrayNullable": true
                 },
                 "customersList": {
                     "name": "customersList",
@@ -152,7 +146,7 @@ export const schema = {
                 "geo": {
                     "name": "geo",
                     "isArray": false,
-                    "type": "AWSJSON",
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -181,9 +175,114 @@ export const schema = {
                     }
                 }
             ]
+        },
+        "Services": {
+            "name": "Services",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "ReservationsId": {
+                    "name": "ReservationsId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "name": {
+                    "name": "name",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "cost": {
+                    "name": "cost",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "quantity": {
+                    "name": "quantity",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "description": {
+                    "name": "description",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "components": {
+                    "name": "components",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            },
+            "syncable": true,
+            "pluralName": "Services",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "ServicesCustomers",
+                        "fields": [
+                            "ReservationsId"
+                        ]
+                    }
+                }
+            ]
+        },
+        "Rooms": {
+            "name": "Rooms",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "number": {
+                    "name": "number",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "sector": {
+                    "name": "sector",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                }
+            },
+            "syncable": true,
+            "pluralName": "Rooms",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                }
+            ]
         }
     },
     "enums": {},
     "nonModels": {},
-    "version": "e7d4bb5935ab65230fc7810b06f7a0b7"
+    "version": "ff89d12447ccc9a4aadd3308602b3d9b"
 };

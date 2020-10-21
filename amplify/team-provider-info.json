@@ -33,5 +33,23 @@
         "datastoreedf30c8f": {}
       }
     }
+  },
+  "develop": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-datastore-develop-33544-authRole",
+      "UnauthRoleArn": "arn:aws:iam::704237175548:role/amplify-datastore-develop-33544-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::704237175548:role/amplify-datastore-develop-33544-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-datastore-develop-33544-deployment",
+      "UnauthRoleName": "amplify-datastore-develop-33544-unauthRole",
+      "StackName": "amplify-datastore-develop-33544",
+      "StackId": "arn:aws:cloudformation:us-east-1:704237175548:stack/amplify-datastore-develop-33544/fec918d0-1042-11eb-b71a-0e3e179d38e3",
+      "AmplifyAppId": "d1k2fqiwfy2nlc"
+    },
+    "categories": {
+      "auth": {
+        "datastoreedf30c8f": {}
+      }
+    }
   }
 }
